@@ -1,23 +1,19 @@
-#ifndef LISTS_H
-#define LISTS_H
+#include "lists.h"
 
 /**
-* struct list_s - singly linked list
-* @str: string - (malloc'ed string)
-* @len: length of the string
-* @next: points to the next node
+* list_len - returns the number of elements in a linked list
+* @h: pointer to the list_t list
 *
-* Description: singly linked list node structure
+* Return: number of elements in h
 */
-typedef struct list_s
+size_t list_len(const list_t *h)
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
-} list_t;
+size_t n = 0;
 
-/* Function prototypes */
-size_t print_list(const list_t *h);
-size_t list_len(const list_t *h);
-
-#endif /* LISTS_H */
+while (h)
+k can{
+n++;
+h = h->next;
+}
+return (n);
+}
